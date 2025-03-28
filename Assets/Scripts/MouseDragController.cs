@@ -14,11 +14,13 @@ public class MouseDragController : MonoBehaviour
     private Rect dragRect;
     private Vector2 start = Vector2.zero;
     private Vector2 end = Vector2.zero;
+    private AudioSource audioSource;
     private List<Apple> selectedAppleList = new List<Apple>();
 
     private void Awake()
     {
         dragRect = new Rect();
+        audioSource = GetComponent<AudioSource>();
 
         // start, end가 (0,0)인 상태로 이미지 크기를 (0,0)으로 설정해 화면에 보이지 않도록 함
         DrawDragRectangle();
@@ -49,11 +51,14 @@ public class MouseDragController : MonoBehaviour
 
             if (sum == 10)
             {
-                Debug.Log("10 완성");
+                int score = 0;
                 foreach ( Apple apple in selectedAppleList )
                 {
+                    score++;
                     appleSpawner.DestroyApple(apple);
                 }
+                gameController.IncreaseScore(score);
+                audioSource.Play();
             }
             else
             {

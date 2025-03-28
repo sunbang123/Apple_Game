@@ -39,7 +39,7 @@ public class AppleSpawner : MonoBehaviour
                 rect.anchoredPosition = new Vector2(px, py);
 
                 Apple apple = clone.GetComponent<Apple>();
-                int rand = Random.Range(0, 5);
+                int rand = Random.Range(0, 4);
 
                 switch (rand)
                 {
@@ -53,9 +53,6 @@ public class AppleSpawner : MonoBehaviour
                         apple.Number = Random.Range(1, 3);
                         break;
                     case 3:
-                        apple.Number = Random.Range(1, 3);
-                        break;
-                    case 4:
                         apple.Number = 1;
                         break;
                 }
@@ -64,7 +61,7 @@ public class AppleSpawner : MonoBehaviour
                 if ( y == height -1 && x == width - 1 )
                 {
                     apple.Number =  10 - (sum % 10);
-                    if (apple.Number == 10 || sum > 700)
+                    if (apple.Number == 10 || sum > 600) // 전체합이 600이 넘지 않게 난이도 조정
                     {
                         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
                     }

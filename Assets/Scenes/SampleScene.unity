@@ -1946,7 +1946,7 @@ GameObject:
   - component: {fileID: 1666085381}
   - component: {fileID: 1666085380}
   - component: {fileID: 1666085379}
-  - component: {fileID: 1666085378}
+  - component: {fileID: 1666085383}
   m_Layer: 5
   m_Name: ButtonRestart
   m_TagString: Untagged
@@ -1973,19 +1973,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 200}
   m_SizeDelta: {x: 250, y: 250}
   m_Pivot: {x: 0.5, y: 0}
---- !u!114 &1666085378
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1666085376}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2203d259cdbb7f44b9155af0d69b8102, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startAudio: {fileID: 1666085379}
 --- !u!82 &1666085379
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2127,7 +2114,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1666085378}
+      - m_Target: {fileID: 1666085383}
         m_TargetAssemblyTypeName: GameStartBtnController, Assembly-CSharp
         m_MethodName: BtnClick
         m_Mode: 1
@@ -2189,6 +2176,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1666085376}
   m_CullTransparentMesh: 1
+--- !u!114 &1666085383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1666085376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2203d259cdbb7f44b9155af0d69b8102, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startAudio: {fileID: 1666085379}
 --- !u!1 &2122508712
 GameObject:
   m_ObjectHideFlags: 0

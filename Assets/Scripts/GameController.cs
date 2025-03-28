@@ -44,6 +44,7 @@ public class GameController : MonoBehaviour
 
         panelMainMenu.SetActive(false);
         panelInGame.SetActive(true);
+        panelGameOver.SetActive(false);
         audioSource.Play();
 
         yield return StartCoroutine(nameof(TimeCounter));
@@ -75,7 +76,7 @@ public class GameController : MonoBehaviour
 
         while (currentTime > 0)
         {
-            currentTime -= Time.deltaTime;
+            currentTime -= Time.deltaTime*15;
             timeGauge.fillAmount = currentTime / maxTime;
 
             yield return null;

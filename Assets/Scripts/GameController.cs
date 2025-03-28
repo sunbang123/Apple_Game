@@ -76,7 +76,7 @@ public class GameController : MonoBehaviour
 
         while (currentTime > 0)
         {
-            currentTime -= Time.deltaTime*15;
+            currentTime -= Time.deltaTime;
             timeGauge.fillAmount = currentTime / maxTime;
 
             yield return null;
